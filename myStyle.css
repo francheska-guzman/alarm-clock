@@ -1,0 +1,22 @@
+/* Francheska Guzman 
+CodeBridge Cycle 2 Cohort 4
+March 13, 2017
+*/
+body {
+	margin: 0;
+	background-image: url("");
+	background-repeat: no-repeat;
+}
+
+#clock {
+	font-size: 200px;
+	text-align: center;
+}
+
+table {
+	width: 200px;
+}
+
+span {
+	font-size: 30px;
+}
