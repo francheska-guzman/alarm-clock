@@ -6,22 +6,34 @@ March 13, 2017
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="myStyle.css">
-	<title></title>
+	<title>Alarm Clock</title>
 <script>
 function startTime() {
-	var today = new Date();
-	var h = today.getHours();
-	var m = today.getMinutes();
-	var s = today.getSeconds();
-	m = checkTime(m);
-	s = checkTime(s);
-	document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+	var time = new Date();
+	var hour = time.getHours();
+	var minute = time.getMinutes();
+	var second = time.getSeconds();
+	var meridiem = "AM"; // By default is AM.
+	hour = checkTime(hour);
+	minute = checkTime(minute);
+	second = checkTime(second);
+
+	if (hour > 12) {
+		hour = hour - 12;
+		meridiem = "PM";
+	}
+	if (hour === 0) {
+		hour = 12;    
+	}
+
+	document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
 	var t = setTimeout(startTime, 500);
 };
 
+//If the hour, minute or second is less than 10, add the "0" to the front.
 function checkTime(i) {
 	if (i < 10) {
-	i = "0" + i;
+		i = "0" + i;
 	};
     return i;
 };
@@ -34,7 +46,7 @@ function checkTime(i) {
 <table>
 <tr>
 <td>
-<form name="clock">
+<form name="AlarmClock">
 <!-- User have the option to turn the alarm On or Off. By default the alarm is off. -->
 <span>Alarm:</span>
 	<input type=radio name=alarmOnOff onClick="alarmOn()"> On
@@ -43,17 +55,14 @@ function checkTime(i) {
 <span>Set Alarm:</span>
 <!-- User select the hour. By default the hour is 12. -->
 <select name=hourOption onChange="alarmSet()" size=1>
-	<option value="00">00<option value="01">01<option value="02">02<option value="03">03
+	<option value="01">01<option value="02">02<option value="03">03
 	<option value="04">04<option value="05">05<option value="06">06<option value="07">07
 	<option value="08">08<option value="09">09<option value="10">10<option value="11">11
 	<option selected value="12">12
-	<option value="13">13<option value="14">14<option value="15">15<option value="16">16
-	<option value="17">17<option value="18">18<option value="19">19<option value="20">20
-	<option value="21">21<option value="22">22<option value="23">23
 </option>
 </select>
 <!-- User select the minute. By default the minute is 00. -->
-<select name=minOption onChange="alarmSet()" size=1>
+<select name=minuteOption onChange="alarmSet()" size=1>
 	<option selected value="00">00<option value="01">01<option value="02">02<option value="03">03
 	<option value="04">04<option value="05">05<option value="06">06<option value="07">07
 	<option value="08">08<option value="09">09<option value="10">10<option value="11">11
@@ -71,6 +80,10 @@ function checkTime(i) {
 	<option value="56">56<option value="57">57<option value="58">58<option value="59">59
 </option>
 </select>
+<!-- User select AM or PM. -->
+<select name=meridiemOption onChange="alarmSet()" size=1>
+	<option selected value="AM">AM<option value="PM">PM
+</option>
 </select>
 </form>
 </td>
