@@ -42,8 +42,8 @@ function alarmSet() {
 	var t = new Date (); // t = time
 	var h = t.getHours(); // h = hour
 	var m = t.getMinutes(); // m = minute
-	var Hours = document.getElementById("h").value;
-	var Minutes = document.getElementById("m").value;
+	var Hours = document.AlarmClock.hourOption[document.AlarmClock.hourOption.selectedIndex].value;
+	var Minutes = document.AlarmClock.minuteOption[document.AlarmClock.minuteOption.selectedIndex].value;
 
 		if(Hours == h && Minutes == m) {
 			var sound = new Audio('audio/HappyDespicableMe.mp3');
