@@ -29,6 +29,7 @@ function startTime() {
 	setTimeout(startTime, 500);
 };
 
+// Adding a 0.
 function checkTime(i) {
 	if (i < 10) {
 		i = "0" + i;
@@ -38,9 +39,9 @@ function checkTime(i) {
 
 /* Function that compares the current time with the alarm. */
 function alarmSet() {
-	var d = new Date ();
-	var h = d.getHours();
-	var m = d.getMinutes();
+	var t = new Date (); // t = time
+	var h = t.getHours(); // h = hour
+	var m = t.getMinutes(); // m = minute
 	var Hours = document.getElementById("h").value;
 	var Minutes = document.getElementById("m").value;
 
@@ -52,7 +53,7 @@ function alarmSet() {
 
 /* Alarm */
 function alarmOn() {
-	alarmSet(); //Call the function.
+	alarmSet(); //Call the function above.
 };
 
 function alarmOff() {
