@@ -53,7 +53,7 @@ function alarmSet() {
 
 var alarmEffect = new Audio('audio/alarmeffect.mp3');
 function alarmOff() {
-	alarmEffect.pause();
+	alarmEffect.pause(); // Pause alarm.
 	ticktockEffect.play();
 };
 
