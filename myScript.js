@@ -42,10 +42,9 @@ function alarmSet() {
 	var t = new Date (); // t = time
 	var h = t.getHours(); // h = hour
 	var m = t.getMinutes(); // m = minute
-	var Hours = document.AlarmClock.hourOption[document.AlarmClock.hourOption.selectedIndex].value;
-	var Minutes = document.AlarmClock.minuteOption[document.AlarmClock.minuteOption.selectedIndex].value;
-
-		if(Hours == h && Minutes == m) {
+	var sHour = document.AlarmClock.hourOption[document.AlarmClock.hourOption.selectedIndex].value;
+	var sMinute = document.AlarmClock.minuteOption[document.AlarmClock.minuteOption.selectedIndex].value;
+		if(sHour == h && sMinute == m) {
 			var sound = new Audio('audio/HappyDespicableMe.mp3');
 			sound.play();
 		};
