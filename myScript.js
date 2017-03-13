@@ -47,7 +47,7 @@ function alarmSet() {
 	// If hour, minute and meridiem are equals, then pause the tick tock effect and play the alarm.
 		if(h == sHour && m == sMinute) {
 			ticktockEffect.pause();
-			var alarmEffect = new Audio('audio/HappyDespicableMe.mp3');
+			var alarmEffect = new Audio('audio/alarmeffect.mp3');
 			alarmEffect.play();
 		};
 };
