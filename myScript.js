@@ -1,3 +1,7 @@
+/* Francheska Guzman 
+CodeBridge Cycle 2 Cohort 4
+March 13, 2017
+*/
 // Function to display the current time, and convert 24-hour clock in a 12-hour clock.
 function startTime() {
 	var time = new Date();
@@ -39,7 +43,7 @@ function alarmSet() {
 	var Hours = document.getElementById("h").value;
 	var Minutes = document.getElementById("m").value;
 
-	if(Hours == h && Minutes == m){
+	if(Hours == h && Minutes == m) {
 		var sound = new Audio('audio/HappyDespicableMe.mp3');
 		sound.play();
 	}
