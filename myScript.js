@@ -37,16 +37,18 @@ function checkTime(i) {
     return i;
 };
 
-/* Function that compares the current time with the alarm. */
+/* Function that compares the alarm setting with the current time. */
 function alarmSet() {
 	var t = new Date (); // t = time
 	var h = t.getHours(); // h = hour
 	var m = t.getMinutes(); // m = minute
-	var sHour = document.AlarmClock.hourOption[document.AlarmClock.hourOption.selectedIndex].value;
-	var sMinute = document.AlarmClock.minuteOption[document.AlarmClock.minuteOption.selectedIndex].value;
-		if(sHour == h && sMinute == m) {
-			var sound = new Audio('audio/HappyDespicableMe.mp3');
-			sound.play();
+	var sHour = document.getElementById("h")[document.getElementById("h").selectedIndex].value;
+	var sMinute = document.getElementById("m")[document.getElementById("m").selectedIndex].value;
+	// If hour, minute and meridiem are equals, then pause the tick tock effect and play the alarm.
+		if(h == sHour && m == sMinute) {
+			ticktockEffect.pause();
+			var alarmEffect = new Audio('audio/HappyDespicableMe.mp3');
+			alarmEffect.play();
 		};
 };
 
@@ -56,5 +58,11 @@ function alarmOn() {
 };
 
 function alarmOff() {
-	sound.pause();
+	alarmEffect.pause();
+	ticktockEffect.play();
 };
+
+/* Tik tok sound effect in a loop. */
+var ticktockEffect = new Audio ('audio/ticktock.mp3');
+ticktockEffect.loop = true;
+ticktockEffect.play();
