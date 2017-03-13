@@ -38,6 +38,7 @@ h1 {
 	color: #FFFFFF;
 	margin: 5px;
 	font-family: 'Source Sans Pro', sans-serif;
+	opacity: .7;
 }
 
 #h, #m, #ampm {

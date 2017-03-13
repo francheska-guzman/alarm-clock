@@ -1,8 +1,10 @@
+// Function to display the current time, and convert 24-hour clock in a 12-hour clock.
 function startTime() {
 	var time = new Date();
 	var hour = time.getHours();
 	var minute = time.getMinutes();
 	var second = time.getSeconds();
+
 	// Calling the checkTime function to add a 0 before numbers of one digit.
 	hour = checkTime(hour);
 	minute = checkTime(minute);
@@ -16,6 +18,7 @@ function startTime() {
 	if (hour === 0) {
 		hour = 12;    
 	};
+
 	// Display current time:
 	document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
 	setTimeout(startTime, 500);
@@ -28,8 +31,12 @@ function checkTime(i) {
     return i;
 };
 
-/* Alarm effect */
+/* Function that compares the current time with the alarm. */
+function alarmSet() {
 
+}
+
+/* Alarm effect */
 var sound = new Audio(".mp3");
 	sound.loop = true;
 
