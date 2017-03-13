@@ -15,7 +15,7 @@ function startTime() {
 		hour = hour - 12;
 		meridiem = "PM";
 	};
-	if (hour === 0) {
+	if (hour == 0) {
 		hour = 12;    
 	};
 
@@ -33,15 +33,24 @@ function checkTime(i) {
 
 /* Function that compares the current time with the alarm. */
 function alarmSet() {
+	var d = new Date ();
+	var h = d.getHours();
+	var m = d.getMinutes();
+	var Hours = document.getElementById("h").value;
+	var Minutes = document.getElementById("m").value;
 
+	if(Hours == h && Minutes == m){
+		var sound = new Audio('audio/HappyDespicableMe.mp3');
+		sound.play();
+	}
 }
 
 /* Alarm effect */
-var sound = new Audio(".mp3");
+var sound = new Audio("HappyDespicableMe.mp3");
 	sound.loop = true;
 
 function alarmOn() {
-	sound.play();
+	alarmSet(); //Call the function.
 };
 
 function alarmOff() {
