@@ -2,6 +2,7 @@
 CodeBridge Cycle 2 Cohort 4
 March 13, 2017
 */
+
 // Function to display the current time, and convert 24-hour clock in a 12-hour clock.
 function startTime() {
 	var time = new Date();
@@ -15,13 +16,13 @@ function startTime() {
 	second = checkTime(second);
 
 	var meridiem = "AM"; // By default is AM.
-	if (hour > 12) {
-		hour = hour - 12;
-		meridiem = "PM";
-	};
-	if (hour == 0) {
-		hour = 12;    
-	};
+		if (hour > 12) {
+			hour = hour - 12;
+			meridiem = "PM";
+		};
+		if (hour == 0) {
+			hour = 12;    
+		};
 
 	// Display current time:
 	document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + second + " " + meridiem;
@@ -43,16 +44,13 @@ function alarmSet() {
 	var Hours = document.getElementById("h").value;
 	var Minutes = document.getElementById("m").value;
 
-	if(Hours == h && Minutes == m) {
-		var sound = new Audio('audio/HappyDespicableMe.mp3');
-		sound.play();
-	}
-}
+		if(Hours == h && Minutes == m) {
+			var sound = new Audio('audio/HappyDespicableMe.mp3');
+			sound.play();
+		};
+};
 
-/* Alarm effect */
-var sound = new Audio("HappyDespicableMe.mp3");
-	sound.loop = true;
-
+/* Alarm */
 function alarmOn() {
 	alarmSet(); //Call the function.
 };

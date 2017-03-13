@@ -21,14 +21,14 @@ March 13, 2017
 <td>
 <h1>SET ALARM</h1>
 <!-- User select the hour. By default the hour is 12. -->
-<select id="h" name="hourOption" onChange="alarmSet()" size=1>
+<select id="h" name="hourOption" onChange=alarmSet() size=1>
 	<option value="01">01<option value="02">02<option value="03">03
 	<option value="04">04<option value="05">05<option value="06">06<option value="07">07
 	<option value="08">08<option value="09">09<option value="10">10<option value="11">11
 	<option selected value="12">12
 </option>
 </select>
-<select id="m" name="minuteOption" onChange="alarmSet()" size=1>
+<select id="m" name="minuteOption" onChange=alarmSet() size=1>
 <!-- User select the minute. -->
 	<option selected value="00">00<option value="01">01<option value="02">02<option value="03">03
 	<option value="04">04<option value="05">05<option value="06">06<option value="07">07
@@ -47,15 +47,15 @@ March 13, 2017
 	<option value="56">56<option value="57">57<option value="58">58<option value="59">59
 </option>
 </select>
-<select id="ampm" name="meridiemOption" onChange="alarmSet()" size = 1 >
+<select id="ampm" name="meridiemOption" onChange=alarmSet() size = 1 >
 <!-- User select AM or PM. -->
 	<option selected value="AM">AM<option value="PM">PM
 </option>
 </select>
 <br/>
 <!-- User have the option to turn alarm ON or OFF. By default the alarm is OFF. -->
-	<input class="myAlarm" type="radio" name="set" onClick="alarmOn()">ON
-	<input class="myAlarm" type="radio" name="set" onClick="alarmOff()" checked>OFF
+	<input class="myAlarm" type="radio" name="set" onClick=alarmOn()>ON
+	<input class="myAlarm" type="radio" name="set" onClick=alarmOff() checked>OFF
 </form>
 </td>
 </tr>
