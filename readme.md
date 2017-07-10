@@ -9,13 +9,9 @@
 
 ## <a id="about">About the project</a>
 
-Per Scholas' CodeBridge Program, Cohort 4
-<br />
-Project 4
-<br />
+Per Scholas' CodeBridge Program, Cohort 4 <br />
+Project 4 <br />
 Developed by Francheska Guzman
-
-</a>
 
 ## <a id="description">Description</a>
 
