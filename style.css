@@ -27,6 +27,15 @@ body {
 	color: #FFFFFF;
 }
 
+a {
+	color: #293949;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #e3e4e5;
+}
+
 table {
 	margin: auto;
 	width: 100%;
@@ -67,4 +76,10 @@ h1 {
 	width: 20px;
 	margin: 10px;
 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+footer {
+	font-family: 'Cabin Condensed', sans-serif;
+	color: #FFFFFF;
+	font-size: 17px;
 }

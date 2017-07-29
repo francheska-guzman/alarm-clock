@@ -16,12 +16,15 @@ function startTime() {
 	second = checkTime(second);
 
 	var meridiem = "AM"; // By default is AM.
+
+		if (hour > 12) {
+			meridiem = "PM";
+			return meridiem;
+		}
+
 		if (hour > 12) {
 			hour = hour - 12;
-			meridiem = "PM";
-		};
-		if (hour == 0) {
-			hour = 12;    
+			return hour;
 		};
 
 	// Display current time:
@@ -52,6 +55,7 @@ function alarmSet() {
 };
 
 var alarmEffect = new Audio('audio/alarmeffect.mp3');
+
 function alarmOff() {
 	alarmEffect.pause(); // Pause alarm.
 	ticktockEffect.play();
@@ -59,5 +63,5 @@ function alarmOff() {
 
 /* Tik tok sound effect in a loop. */
 var ticktockEffect = new Audio ('audio/ticktock.mp3');
-ticktockEffect.loop = true;
-ticktockEffect.play();
+	ticktockEffect.loop = true;
+	ticktockEffect.play();
