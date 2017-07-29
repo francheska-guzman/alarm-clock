@@ -6,6 +6,7 @@
 2. [Description](#description)
 3. [How to use](#instructions)
 4. [Technologies used](#technologies)
+5. [Cross-browser compatibility](#compatibility)
 
 ## <a id="about">About the project</a>
 
@@ -26,3 +27,13 @@ Set the alarm, and wait until the current time reach it out.
 * HTML
 * CSS
 * JavaScript
+
+## <a id="compatibility">Cross-browser compatibility</a>
+
+This site has been tested in the following browsers:
+
+Chrome – Version 59.0.3071.115 
+
+Firefox – Version 54.0.1
+
+Safari – Version 9.1.2
